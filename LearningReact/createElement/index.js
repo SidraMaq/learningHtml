@@ -8,7 +8,8 @@ let element = React.createElement(
     src: "https://imgs.xkcd.com/comics/random_number.png",
     alt: "RFC 1149.5 specifies 4 as the standard IEEE-vetted random number",
   }),
-  React.createElement("span", null, "Sidra Maqbool")
+  React.createElement("h1", null, "Sidra Maqbool"),
+  React.createElement("div", { className: "" }, "Hello World!")
 );
 console.log(element.props.children[0].type);
 console.log(element.props.children[1].props.children);
