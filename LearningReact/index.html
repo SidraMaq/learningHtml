@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React app</title>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script src="https://unpkg.com/react@16.9.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16.9.0/umd/react-dom.production.min.js"></script>
+<script>
+    //The 'React variable is set by the first <script> tag'
+    //in the above html file
+    let createElement = React.createElement
+    let rootElement = 
+    createElement('div',{},
+        createElement('h1', {}, "Contact"),
+        createElement('ul',{},
+            createElement('li',{},
+              createElement('a',{href:'mailto:sidramaqbool64@yahoo.com'},
+              "Sidra Maqbool",
+              ),
+            ),
+            createElement('li',{},
+                createElement('a',{href: 'mailto:sochan@yahoo.com'},
+                "Me"
+                )
+            )
+        )
+    )
+
+    //The reactDOM variable is set by this second <script> tag 
+    //in the above HTML file 
+    let domNode =  document.getElementById('root')
+    ReactDOM.render(rootElement, domNode)
+</script>
+</body>
+</html>
