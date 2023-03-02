@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web storage</title>
+</head>
+<body>
+    <input type="text" id="myInput">
+    <button onclick="saveText()">Save Text</button>
+    <button onclick="loadText()">Load Text</button>
+
+    <script>
+    function saveText() {
+        var text = document.getElementById("myInput").value;
+        localStorage.setItem("myText", text);
+    }
+    
+    function loadText() {
+        var text = localStorage.getItem("myText");
+        document.getElementById("myInput").value = text;
+    }
+    </script>
+
+</body>
+</html>
