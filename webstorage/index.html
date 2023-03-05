@@ -12,15 +12,35 @@
     <button onclick="loadText()">Load Text</button>
 
     <script>
-    function saveText() {
-        var text = document.getElementById("myInput").value;
-        localStorage.setItem("myText", text);
-    }
-    
-    function loadText() {
-        var text = localStorage.getItem("myText");
-        document.getElementById("myInput").value = text;
-    }
+        //check if local storage is supported by browser 
+        if(typeof(Storage) !== "undefined"){
+            console.log("Web Storage is supported.");
+        }else{
+            console.log("Web Storage is not supported.")
+        }
+
+        function saveText() {
+            //Get the input field value
+            var text = document.getElementById("myInput").value;
+
+            //save data to local storage
+            localStorage.setItem("myText", text);
+
+            console.log("Data saved to local storage");
+        }
+        
+        function loadText() {
+            //Load data from local storage
+            var text = localStorage.getItem("myText");
+
+            if(text){
+                document.getElementById("myInput").value = text;
+                console.log("Data loaded from local storage: " + text)
+            }else{
+                console.log("No data found in local storage")
+            }
+            
+        }
     </script>
 
 </body>
