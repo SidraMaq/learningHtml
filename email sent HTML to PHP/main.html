@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sending Emails from a Simple HTML Page to Email Addresses using PHP Code</title>
+</head>
+<body>
+    <p>This is a simple HTML form that we can use to send an email.</p>
+   
+   <form method="post" action="submit.php">
+     <!-- This will add an input field where users can enter their name. The "type" attribute is set to "text" to allow users to enter text. The "name" attribute is set to "name" to identify this field in your PHP code, and the "required" attribute ensures that users must enter their name before submitting the form. -->
+       <div>
+               <input type="text" placeholder="Your Name*" name="name" id="name" required>
+            </div>
+            <!-- This will add a label "Email" and an input field where users can enter their email address. The "type" attribute is set to "email" to ensure that users enter a valid email address. The "name" attribute is set to "email" to identify this field in your PHP code, and the "required" attribute ensures that users must enter their email address before submitting the form. -->
+            <div>
+                <input type="text" placeholder="Your Email" name="email" id="email" required>
+            </div>
+             <!-- This will add a label "Phone" and an input field where users can enter their Phone address. The "name" attribute is set to "phone" to identify this field in your PHP code, and the "required" attribute ensures that users must enter their phone address before submitting the form. -->
+            <div>
+                <input type="text" placeholder="Your Phone*" name="phone" id="phone" required>
+            </div>
+            <!-- textarea for your message -->
+            <div>
+               <textarea placeholder="Message" name="message" id="message"></textarea>
+           </div>
+           <!-- This will add a button that users can click to submit the form. The "type" attribute is set to "submit" to indicate that this is a submit button, and the "value" attribute is set to "Submit" to display the text "Submit" on the button. -->
+            <div>
+                <button type="submit">Submit now</button>
+            </div>
+    </form>
+</body>
+</html>

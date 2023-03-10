@@ -15,7 +15,8 @@ function updateCartDisplay() {
       listItem.innerHTML = item;
       itemList.appendChild(listItem);
     }
-  }
+    }
+    //
 }
 
 // Update the cart display initially
